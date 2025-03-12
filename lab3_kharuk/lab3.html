@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <a style="display: block; text-align: right" href="../index.html">На головну</a>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мої одногрупники</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: center;
+        }
+        th, td {
+            border: 2px solid black;
+            padding: 10px;
+            background-color: #f0f0f0;
+        }
+        img {
+            width: 150px;
+            height: 112px;
+            cursor: pointer;
+        }
+        .bio {
+            display: none;
+        }
+    </style>
+    <script>
+        function showBio(id) {
+            document.querySelectorAll('.bio').forEach(bio => bio.style.display = 'none');
+            document.getElementById(id).style.display = 'table-row';
+        }
+    </script>
+</head>
+<body>
+    <table>
+        <tr>
+            <th><img src="anime/0070.gif" alt="Анімація"></th>
+            <th colspan="4">Мої одногрупники</th>
+        </tr>
+        <tr>
+            <td><img src="image/1.jpg" alt="Фото 1" onclick="showBio('bio1')"><br>Савчук Д.</td>
+            <td><img src="image/2.jpg" alt="Фото 2" onclick="showBio('bio2')"><br>Сондей В.</td>
+            <td><img src="image/3.jpg" alt="Фото 3" onclick="showBio('bio3')"><br>Стасів В.</td>
+            <td><img src="image/4.jpg" alt="Фото 4" onclick="showBio('bio4')"><br>Угринюк М.</td>
+        </tr>
+        <tr id="bio1" class="bio">
+            <td colspan="4">П.І.: Савчук Дмитро<br>Дата народження: 24.10.2007<br>Email: dmutro@pnu.edu.ua<br>Улюблена мелодія: <audio controls><source src="song/song1.mp3" type="audio/mpeg"></audio></td>
+        </tr>
+        <tr id="bio2" class="bio">
+            <td colspan="4">П.І.: Сондей Володимир<br>Дата народження: 18.02.2007<br>Email: volodimir@pnu.edu.ua<br>Улюблена мелодія: <audio controls><source src="song/song2.mp3" type="audio/mpeg"></audio></td>
+        </tr>
+        <tr id="bio3" class="bio">
+            <td colspan="4">П.І.: Стасів Владислав<br>Дата народження: 27.04.2007<br>Email: vladislav@pnu.edu.ua<br>Улюблена мелодія: <audio controls><source src="song/song3.mp3" type="audio/mpeg"></audio></td>
+        </tr>
+        <tr id="bio4" class="bio">
+            <td colspan="4">П.І.: Угринюк Микола<br>Дата народження: 20.12.2006<br>Email: mukola@pnu.edu.ua<br>Улюблена мелодія: <audio controls><source src="song/song4.mp3" type="audio/mpeg"></audio></td>
+        </tr>
+    </table>
+    
+    <h3>Відео</h3>
+    <video controls width="600">
+        <source src="video/video.mp4" type="video/mp4">
+    </video>
+    
+    <h3>Завантаження</h3>
+    <p><a href="song/song1.mp3" download>Завантажити аудіо</a></p>
+    <p><a href="video/video.mp4" download>Завантажити відео</a></p>
+</body>
+</html>
